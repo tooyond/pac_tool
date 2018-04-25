@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <link rel="stylesheet" href="./mdui-v0.4.1/css/mdui.min.css">
+    <script src="./mdui-v0.4.1/js/mdui.min.js"></script>
+</head>
+
+<body class="mdui-color-transparent mdui-theme-primary-indigo" style="width:400px;height:400px">
+    <div class="mdui-container-fluid" style="padding:0 2px">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a id="domain_btn" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">format_list_bulleted</i>
+            </a>
+            <span class="mdui-typo-title">导入域名</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <a id="setting_btn" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">settings</i>
+            </a>
+        </div>
+        <div class="mdui-progress" style="position:absolute;display:none">
+            <div class="mdui-progress-indeterminate"></div>
+        </div>
+        <div class="mdui-tab" id="tabs" mdui-tab style="display:none">
+            <a href="#domain" id="tab_domain" class="mdui-ripple">domain</a>
+            <a href="#setting" id="tab_setting" class="mdui-ripple">setting</a>
+        </div>
+        <div id="domain" class="mdui-p-a-2">
+            <ul class="mdui-list" id="domain_list">
+            </ul>
+        </div>
+        <div id="setting" class="mdui-p-a-2">
+            <div class="mdui-textfield">
+                <label class="mdui-textfield-label">PAC文件存储位置</label>
+                <textarea id="file_path_input" class="mdui-textfield-input"></textarea>
+                <input type="file" style="display:none" id="file_input" />
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="popup.js"></script>
+
+</html>
